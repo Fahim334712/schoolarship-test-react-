@@ -1,0 +1,25 @@
+.designFirstPart{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.compoGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+@media only screen and (max-width:688px) {
+    .compoGrid{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.cart{
+    border-left: 2px dashed aqua;
+    margin-left: 10px;
+    margin-top: 5px;
+    text-align: left;
+}
+.all{
+    margin-left: 5px;
+}
