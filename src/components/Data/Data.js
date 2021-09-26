@@ -1,25 +1,33 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Main from '../Main/Main';
 import './Data.css'
 
 const Data = () => {
     const [datas, setDatas] = useState([]);
+    const [cart, setCart] = useState([])
     useEffect(() => {
         fetch('./mydata.json')
             .then(res => res.json())
             .then(data => setDatas(data));
     }, [])
 
+    const handleCart = (data) => {
+        const newCart = [...cart, data]
+        setCart(newCart);
+    }
+
+
     return (
         <div className="designFirstPart">
             <div className="compoGrid">
                 {
-                    datas.map(data => <Main key={data.id} data={data}></Main>)
+                    datas.map(data => <Main handleCart={handleCart} key={data.id} data={data}></Main>)
                 }
             </div>
             <div className="cart">
-                <h4 className="all">Count Person : </h4>
-                <h4 className="all">Given Money : </h4>
+                <Cart this={cart.name} cart={cart}></Cart>
+
             </div>
         </div>
     );

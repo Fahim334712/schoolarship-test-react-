@@ -12,6 +12,7 @@
     .compoGrid{
         display: grid;
         grid-template-columns: repeat(1,1fr);
+        font-family: 'Noto Serif', cursive;
     }
 }
 .cart{
@@ -19,7 +20,4 @@
     margin-left: 10px;
     margin-top: 5px;
     text-align: left;
-}
-.all{
-    margin-left: 5px;
 }

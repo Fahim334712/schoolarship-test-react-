@@ -1,8 +1,12 @@
 import React from 'react';
-import './Main.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import './Main.css';
+
 
 const Main = (props) => {
     const { name, age, gpa, family_income, given_amount, picture } = props.data;
+    const element = <FontAwesomeIcon icon={faDollarSign} />
     return (
         <div>
             <div className="borderIssue com">
@@ -17,7 +21,7 @@ const Main = (props) => {
                         <h6 className="allin">GPA : {gpa}</h6>
                         <h6 className="allin">Family-Income : {family_income}</h6>
                         <h6 className="allin">Given-amount : ${given_amount}</h6>
-                        <button className="btn">Give the money</button>
+                        <button name={name} onClick={() => props.handleCart(props.data)} className="btn">{element}Give the money</button>
                     </div>
 
                 </div>
