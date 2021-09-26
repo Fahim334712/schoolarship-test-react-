@@ -21,7 +21,7 @@ const Main = (props) => {
                         <h6 className="allin">GPA : {gpa}</h6>
                         <h6 className="allin">Family-Income : {family_income}</h6>
                         <h6 className="allin">Given-amount : ${given_amount}</h6>
-                        <button name={name} onClick={() => props.handleCart(props.data)} className="btn">{element}Give the money</button>
+                        <button name={name} onClick={() => props.handleCart(props.data)} className="btn">{element} Give the money</button>
                     </div>
 
                 </div>
