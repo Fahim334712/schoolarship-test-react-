@@ -4,8 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-This is a demo app for sending money to scholarship winner students
-Some of the data applied for the scholarship will be stored in our database.With the information from the database, their family status, their test results, we can send money to their account.
+This is a demo app for sending money to scholarship winner students.
+Some of the data applied for the scholarship will be stored in our database.With the information from the database their family Income, their test results we can send money to their account.
 
 
 ### `npm start`
