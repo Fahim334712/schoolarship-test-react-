@@ -6,6 +6,7 @@ import './Data.css'
 const Data = () => {
     const [datas, setDatas] = useState([]);
     const [cart, setCart] = useState([])
+
     useEffect(() => {
         fetch('./mydata.json')
             .then(res => res.json())
@@ -26,9 +27,9 @@ const Data = () => {
                 }
             </div>
             <div className="cart">
-                <Cart this={cart.name} cart={cart}></Cart>
-
+                <Cart cart={cart}></Cart>
             </div>
+
         </div>
     );
 };
